@@ -1,0 +1,58 @@
+{
+  "name": "uws.ts-boiler-minimal",
+  "description": "An open boilerplate for uWebsockets.js",
+  "author": "Kiran AK",
+  "license": "MIT",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/redocnib/uwebsockets.js-boiler-minimal"
+  },
+  "homepage": "https://github.com/redocnib/uwebsockets.js-boiler-minimal",
+  "bugs": {
+    "url": "https://github.com/redocnib/uwebsockets.js-boiler-minimal/issues"
+  },
+  "engines": {
+    "node": "^14.10.0"
+  },
+  "private": true,
+  "workspaces": [
+    "src/*"
+  ],
+  "scripts": {
+    "start": "node toolchain/start",
+    "start:hmr": "node toolchain/hmr",
+    "start:prod": "node toolchain/start --prod",
+    "build:dev": "node toolchain/build",
+    "build:prod": "node toolchain/build --prod"
+  },
+  "resolutions": {
+    "typescript": "4.1.3",
+    "immutable": "3.8.2"
+  },
+  "dependencies": {
+    "dd-trace": "^0.16.3",
+    "dotenv": "8.0.0",
+    "dotenv-expand": "5.1.0",
+    "es6-promisify": "^5.0.0",
+    "immutable": "3.8.2",
+    "start-server-webpack-plugin": "^2.2.5",
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#19.2.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "4.10.0",
+    "@typescript-eslint/parser": "4.10.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "minimist": "^1.2.5",
+    "prettier": "^1.19.1",
+    "run-script-webpack-plugin": "0.0.8",
+    "typescript": "4.1.3",
+    "webpack": "5.10.3",
+    "webpack-cli": "4.2.0",
+    "webpack-node-externals": "2.5.2"
+  }
+}

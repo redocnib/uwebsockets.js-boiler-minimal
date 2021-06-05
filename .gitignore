@@ -1,0 +1,14 @@
+.env
+*.log
+.DS_Store
+.awcache/
+.heapprofile
+.heapsnapshot
+.history/
+.idea/
+build/
+dev/
+dist/
+node_modules/
+package-lock.json
+webpack-assets.json
