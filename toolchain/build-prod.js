@@ -27,11 +27,11 @@ const compile = (config, isSilent) => {
   })
 }
 
-const buildProduction = async (isDeploy) => {
+const buildProduction = async () => {
   console.info('🤞🥶🤞 :: Starting Production Build :: 🤞🥶🤞')
   console.log('Clearing previous files.')
   await emptyProjectDir('dist')
-  const serversConfig = makeServersConfig({isDeploy})
+  const serversConfig = makeServersConfig()
   return await compile(serversConfig)
 }
 

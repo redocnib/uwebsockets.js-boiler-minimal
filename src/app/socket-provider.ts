@@ -2,7 +2,6 @@ import * as uws from 'uWebSockets.js'
 
 const APP_PORT = parseInt(process.env.PORT ?? '4000')
 const APP_HOST = process.env.HOST ?? '127.0.0.1'
-
 export default class UWSocketProvider {
   private static instance: UWSocketProvider
   private app: uws.TemplatedApp

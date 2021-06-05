@@ -5,7 +5,6 @@ const PROJECT_ROOT = getProjectRoot()
 const SERVER_ROOT = path.join(PROJECT_ROOT, 'src')
 const DOTENV = path.join(PROJECT_ROOT, 'toolchain', 'webpack', 'utils', 'dotenv.js')
 // const CircularDependencyPlugin = require('circular-dependency-plugin')
-
 module.exports = {
   stats: 'minimal',
   devtool: 'eval-source-map',

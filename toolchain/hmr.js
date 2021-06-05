@@ -1,6 +1,7 @@
 const {emptyProjectDir} = require('./webpack/utils/pathUtils')
 const webpack = require('webpack')
 const config = require('./webpack/hmr.server.config')
+const DOTENV = require('./webpack/utils/dotenv.js')
 
 const compile = (config, isSilent) => {
   return new Promise((resolve) => {

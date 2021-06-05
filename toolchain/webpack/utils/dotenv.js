@@ -9,4 +9,5 @@ const getProjectRoot = require('./getProjectRoot')
 const PROJECT_ROOT = getProjectRoot()
 const envPath = path.join(PROJECT_ROOT, '.env')
 const myEnv = dotenv.config({path: envPath})
+process.env.PROJECT_ROOT = PROJECT_ROOT + '/'
 dotenvExpand(myEnv)

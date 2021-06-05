@@ -5,14 +5,13 @@ const config = require('./webpack/dev.server.config')
 const compile = (config, isSilent) => {
   return new Promise((resolve) => {
     const cb = (err, stats) => {
-
       if (err && !isSilent) {
         console.error('Webpack error:', err)
       }
       const {errors} = stats.compilation
       if (errors.length > 0 && !isSilent) {
         console.error('\n😐 :: Build Failed :: 😐\n', errors)
-        process.exit();
+        process.exit()
       }
 
       if (!err && stats) {

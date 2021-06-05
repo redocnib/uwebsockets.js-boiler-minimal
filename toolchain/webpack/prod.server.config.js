@@ -10,7 +10,7 @@ const DOTENV = path.join(PROJECT_ROOT, 'toolchain/webpack/utils/dotenv.js')
 const publicPath = getWebpackPublicPath()
 const distPath = path.join(PROJECT_ROOT, 'dist')
 
-module.exports = ({isDeploy}) => ({
+module.exports = () => ({
   mode: 'production',
   stats: 'detailed',
   node: {
@@ -22,6 +22,11 @@ module.exports = ({isDeploy}) => ({
   output: {
     filename: '[name].js',
     path: path.join(PROJECT_ROOT, 'dist')
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
   },
   resolve: {
     alias: {
@@ -39,13 +44,6 @@ module.exports = ({isDeploy}) => ({
       allowlist: [/server-root/]
     })
   ],
-  plugins: [
-    new webpack.SourceMapDevToolPlugin({
-      filename: '[name]_[contenthash].js.map',
-      append: `\n//# sourceMappingURL=${publicPath}[url]`
-    }),
-    isDeploy
-  ].filter(Boolean),
   module: {
     rules: [
       {
